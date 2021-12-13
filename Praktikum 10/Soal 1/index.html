@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Laurentius Gusti Ontoseno Panata Yudha-2172028">
+    <title>Soal 1</title>
+    <style>
+        #a{
+            width: 100%;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        #jumlah,#kurang,#kali,#bagi{
+            border: 0.1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id=a style='background-color:rgb(138, 109, 73);'>Penjumlahan</div>
+        <div id=jumlah>
+        <input type="text" id="b" name="fname" readonly > + <input type="text" id="c" name="fname" readonly> = <input type="text" id="d" name="fname">  <button onclick="hasil()">Hitung</button><br><br>
+        <button onclick="penjumlahan()">Random</button> <span id="e"> </span>
+        </div>
+    <div id=a style='background-color:rgb(0,191,255);'>Pengurangan</div>
+        <div id=kurang>
+        <input type="text" id="f"  readonly > - <input type="text" id="g" readonly> = <input type="text" id="h">  <button onclick="hasilkurang()">Hitung</button><br><br>
+        <button onclick="pengurangan()">Random</button> <span id="i"> </span>
+        </div>
+    <div id=a style='background-color:rgb(255,20,147);'>Perkalian</div>
+        <div id=kali>
+        <input type="text" id="j" name="fname" readonly > * <input type="text" id="k" name="fname" readonly> = <input type="text" id="l" name="fname">  <button onclick="hasilkali()">Hitung</button><br><br>
+        <button onclick="perkalian()">Random</button> <span id="m"> </span>
+        </div>
+    <div id=a style='background-color:rgb(255,99,71);'>Bilangan</div>
+        <div id=bagi>
+        <input type="text" id="n" name="fname" readonly > = <input type="text" id="o" name="fname">  <input type="text" id="p" name="fname"> <input type="text" id="q" name="fname"> <button onclick="hasilbil()">Hitung</button><br><br>
+        <button onclick="bilangan()">Random</button> <span id="r"> </span>
+        </div>
+    <script>
+    function penjumlahan (){ 
+     let a=document.querySelector("#b");
+     let b=Math.floor(Math.random()*999)
+     if (b>=100){
+     a.value=b;
+    }
+     let c=document.querySelector("#c");
+     let d=Math.floor(Math.random()*999);
+     if (d>=100){
+     c.value=d;
+    }
+    }
+    
+    function hasil (){
+        let a=document.querySelector("#d").value;
+        let b=document.querySelector("#e")
+        let c=document.querySelector("#b").value;
+        let d=document.querySelector("#c").value;
+        let e=Number(c)+Number(d);
+        if (a==e) {
+            b.innerHTML="Jawaban Benar"
+            
+        }
+        else {
+            b.innerHTML="Jawaban Salah"
+        }
+    }
+    function pengurangan (){ 
+     let a=document.querySelector("#f");
+     let b=Math.floor(Math.random()*999)
+     if (b>=100){
+     a.value=b;
+    }
+     let c=document.querySelector("#g");
+     let d=Math.floor(Math.random()*999);
+     if (d>=100){
+     c.value=d;
+    }
+    }
+    
+    function hasilkurang (){
+        let a=document.querySelector("#h").value;
+        let b=document.querySelector("#i")
+        let c=document.querySelector("#f").value;
+        let d=document.querySelector("#g").value;
+        let e=Number(c)-Number(d);
+        if (a==e) {
+            b.innerHTML="Jawaban Benar"
+            
+        }
+        else {
+            b.innerHTML="Jawaban Salah"
+        }
+    }
+    function perkalian (){ 
+     let a=document.querySelector("#j");
+     let b=Math.floor(Math.random()*100)
+     a.value=b;
+     let c=document.querySelector("#k");
+     c.value=Math.floor(Math.random()*100)
+    }
+    
+    function hasilkali (){
+        let a=document.querySelector("#l").value;
+        let b=document.querySelector("#m")
+        let c=document.querySelector("#j").value;
+        let d=document.querySelector("#k").value;
+        let e=Number(c)*Number(d);
+        if (a==e) {
+            b.innerHTML="Jawaban Benar"
+            
+        }
+        else {
+            b.innerHTML="Jawaban Salah"
+        }
+    }
+    function bilangan (){ 
+     let a=document.querySelector("#n");
+     let b=Math.floor(Math.random()*999)
+     if (b>=100){
+     a.value=b;
+    }
+}
+    function hasilbil (){
+        let a=document.querySelector("#n").value;
+        let b=document.querySelector("#r")
+        let c=document.querySelector("#o").value;
+        let d=document.querySelector("#p").value;
+        let f=document.querySelector("#q").value;
+        let e=c+d+f;
+        
+        if (a==e) {
+            b.innerHTML="Jawaban Benar"
+            
+        }
+        else {
+            b.innerHTML="Jawaban Salah"
+        }
+    }
+    </script>
+</body>
+</html>

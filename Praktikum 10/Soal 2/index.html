@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Laurentius Gusti Ontoseno Panata Yudha-2172028">
+    <title>Soal 2</title>
+</head>
+<style>
+    table {
+        border-spacing: 0cm;
+        margin: auto;
+        
+    }
+    td{
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+        font-size: larger;
+       
+    }
+    h2,h3{
+        text-align: center;
+    }
+
+</style>
+<body>
+    <h2>Tic Tac Toe</h2>
+    <table>
+        
+        <tr>
+            <td id="b" onclick="main('#b')"></td>
+            <td id="c" onclick="main('#c')"></td>
+            <td id="d" onclick="main('#d')"></td>
+        </tr>
+        <tr>
+            <td id="e" onclick="main('#e')"></td>
+            <td id="j" onclick="main('#j')"></td>
+            <td id="f" onclick="main('#f')"></td>
+        </tr>
+        <tr>
+            <td id="g" onclick="main('#g')"></td>
+            <td id="h" onclick="main('#h')"></td>
+            <td id="i" onclick="main('#i')"></td>
+        </tr>
+    </table>
+    <h3 id="a">O's turn</h3>
+    <h2><button value="reset" onclick="window.location.reload();">RESTART GAME</button></h2>
+    <script>
+        function reset(){
+            document.reset();
+        }
+      let a=0;
+      let won=0;
+      function main(id){
+          if (won==0){
+          a++;
+          let b=document.querySelector(id)
+          let c=a%2
+          if(c==0){
+            b.innerHTML="X"
+            document.querySelector("#a").innerHTML="O's turn";
+            b.onclick=""
+          }
+          else{
+            b.innerHTML="O"
+            b.onclick=""
+            document.querySelector("#a").innerHTML="X's turn";
+          }
+          let bb=document.querySelector("#b").innerHTML;
+          console.log(bb)
+          let cc=document.querySelector("#c").innerHTML;
+          let dd=document.querySelector("#d").innerHTML;
+          let ee=document.querySelector("#e").innerHTML;
+          let ff=document.querySelector("#f").innerHTML;
+          let gg=document.querySelector("#g").innerHTML;
+          let hh=document.querySelector("#h").innerHTML;
+          let ii=document.querySelector("#i").innerHTML;
+          let jj=document.querySelector("#j").innerHTML;
+
+          let bbb=document.querySelector("#b");
+          console.log(bb)
+          let ccc=document.querySelector("#c");
+          let ddd=document.querySelector("#d");
+          let eee=document.querySelector("#e");
+          let fff=document.querySelector("#f");
+          let ggg=document.querySelector("#g");
+          let hhh=document.querySelector("#h");
+          let iii=document.querySelector("#i");
+          let jjj=document.querySelector("#j");
+
+          if ((bb=="X") && (cc=="X") && (dd=="X")){
+          bbb.style.backgroundColor="yellow";
+          ccc.style.backgroundColor="yellow";
+          ddd.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+        if ((bb=="O") && (cc=="O") && (dd=="O")){
+          bbb.style.backgroundColor="yellow";
+          ccc.style.backgroundColor="yellow";
+          ddd.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((ee=="O") && (jj=="O") && (ff=="O")){
+          eee.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          fff.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((ee=="X") && (jj=="X") && (ff=="X")){
+          eee.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          fff.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+        if ((gg=="O") && (hh=="O") && (ii=="O")){
+          ggg.style.backgroundColor="yellow";
+          hhh.style.backgroundColor="yellow";
+          iii.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((gg=="X") && (hh=="X") && (ii=="X")){
+          ggg.style.backgroundColor="yellow";
+          hhh.style.backgroundColor="yellow";
+          iii.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+      if ((bb=="O") && (ee=="O") && (gg=="O")){
+          bbb.style.backgroundColor="yellow";
+          eee.style.backgroundColor="yellow";
+          ggg.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((bb=="X") && (ee=="X") && (gg=="X")){
+          bbb.style.backgroundColor="yellow";
+          eee.style.backgroundColor="yellow";
+          ggg.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+        if ((cc=="O") && (jj=="O") && (hh=="O")){
+          ccc.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          hhh.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((cc=="X") && (jj=="X") && (hh=="X")){
+          ccc.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          hhh.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+        if ((dd=="O") && (ff=="O") && (ii=="O")){
+          ddd.style.backgroundColor="yellow";
+          fff.style.backgroundColor="yellow";
+          iii.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((dd=="X") && (ff=="X") && (ii=="X")){
+          ddd.style.backgroundColor="yellow";
+          fff.style.backgroundColor="yellow";
+          iii.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+        if ((bb=="O") && (jj=="O") && (ii=="O")){
+          bbb.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          iii.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((bb=="X") && (jj=="X") && (ii=="X")){
+          bbb.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          iii.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+        if ((dd=="O") && (jj=="O") && (gg=="O")){
+          ddd.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          ggg.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player O has won";
+          won=1;
+        }
+        if ((dd=="X") && (jj=="X") && (gg=="X")){
+          ddd.style.backgroundColor="yellow";
+          jjj.style.backgroundColor="yellow";
+          ggg.style.backgroundColor="yellow";
+          document.querySelector("#a").innerHTML="Player X has won";
+          won=1;
+        }
+    }
+    }  
+    </script>
+</body>
+</html>
